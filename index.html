@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa de Aniversário da Eloa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe4e1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #ff1493;
+        }
+        button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Festa de Aniversário da Eloa!</h1>
+        <p>Estamos muito felizes em anunciar que a Eloa vai comemorar seu aniversário com uma festa especial.</p>
+        <p>Para conferir a lista de convidados que já confirmaram presença, clique no link abaixo:</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSexglgE2IFny-cOLY2WRBAI1YbDUba0c7aWjeshABLz3f581A/viewanalytics" target="_blank">Ver Lista de Convidados</a>
+        <br>
+        <button id="playButton">Ouvir som da página</button>
+    </div>
+    <audio id="audio" preload="auto" style="display: none;">
+        <source src="WhatsApp Audio 2024-05-30 at 08.06.13.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            audio.play().catch(function(error) {
+                console.log('Erro ao tentar reproduzir o áudio:', error);
+            });
+        });
+    </script>
+</body>
+</html>
